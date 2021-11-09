@@ -1,0 +1,27 @@
+﻿<Window x:Class="RaiseCasa.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RaiseCasa.App"
+        mc:Ignorable="d"
+        Title="MainWindow" ResizeMode="NoResize" Height="720" Width="1024">
+	<Grid>
+		<Grid.Background>
+			<ImageBrush ImageSource="/home.jpg"/>
+		</Grid.Background>
+		<Button Content="SpideyRoom" HorizontalAlignment="Center" Margin="0,496,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.505,0.603" Click="SpideyRoomButtonClick"/>
+		<Label Content="Light Satus: " HorizontalAlignment="Left" Margin="448,521,0,0" VerticalAlignment="Top"/>
+		<Label Name="SpideyRoomState" Foreground="Black"  Content="False" HorizontalAlignment="Left" Margin="512,521,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.7,0.404" Height="25" Width="90"/>
+		<Slider Name="Brightness" Value="127" Maximum="254"  TickPlacement="BottomRight" TickFrequency="5" IsSnapToTickEnabled="True" HorizontalAlignment="Left" Margin="378,413,0,0" VerticalAlignment="Top" Width="120" PreviewMouseUp="ChangeSpideyRoomBrightness"/>
+		<Label Content="Brightness" HorizontalAlignment="Left" Margin="405,431,0,0" VerticalAlignment="Top"/>
+		<Slider Name="Warmness" Value="200" Maximum="327" Minimum="153" TickPlacement="BottomRight" TickFrequency="5" IsSnapToTickEnabled="True" HorizontalAlignment="Left" Margin="512,413,0,0" VerticalAlignment="Top" Width="120" PreviewMouseUp="ChangeSpideyRoomWarmness"/>
+		<Label Content="Warmness" HorizontalAlignment="Left" Margin="540,431,0,0" VerticalAlignment="Top"/>
+		<Button Content="Kitchen" HorizontalAlignment="Left" Margin="557,237,0,0" VerticalAlignment="Top" Height="23" Width="52" Click="KitchenButtonClick"/>
+		<Label x:Name="Kitchen" Foreground="Black"  Content="False" HorizontalAlignment="Left" Margin="557,290,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.7,0.404" Height="25" Width="90"/>
+		<Label Content="Light Satus: " HorizontalAlignment="Left" Margin="546,264,0,0" VerticalAlignment="Top"/>
+		<Button Content="Bathroom" HorizontalAlignment="Left" Margin="438,244,0,0" VerticalAlignment="Top" Height="23" Width="66" Click="MainBathroomClick"/>
+		<Label Content="Light Satus: " HorizontalAlignment="Left" Margin="435,267,0,0" VerticalAlignment="Top"/>
+		<Label x:Name="MainBathroom" Foreground="Black"  Content="False" HorizontalAlignment="Left" Margin="446,290,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.7,0.404" Height="25" Width="90"/>
+	</Grid>
+</Window>
